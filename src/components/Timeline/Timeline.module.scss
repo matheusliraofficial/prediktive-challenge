@@ -1,0 +1,159 @@
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.timeline {
+  position: relative;
+  min-height: 100px;
+  min-width: 800px;
+}
+
+.timelineHeader {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.lanes {
+  position: relative;
+  padding-top: 40px;
+}
+
+.lane {
+  position: relative;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.event {
+  position: absolute;
+  height: 40px;
+  background: #4a90e2;
+  border-radius: 4px;
+  padding: 0 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #357abd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.eventLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.timeMarkers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.timeMarker {
+  position: absolute;
+  font-size: 12px;
+  color: #6c757d;
+  transform: translateX(-50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    height: 6px;
+    width: 1px;
+    background: #dee2e6;
+  }
+}
+
+.zoomControls {
+  display: flex;
+  gap: 5px;
+
+  button {
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f8f9fa;
+    }
+  }
+}
+
+.gridLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+
+  .gridLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(222, 226, 230, 0.5);
+  }
+}
+
+.timeMarkers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.timeMarker {
+  position: absolute;
+  font-size: 12px;
+  color: #6c757d;
+  transform: translateX(-50%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    height: 6px;
+    width: 1px;
+    background: #dee2e6;
+  }
+}
+
+.eventInput {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
